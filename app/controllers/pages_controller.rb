@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @name = params[:name]
+    params[:name] ? @name = params[:name] : @name = "X-Men" 
   end
 end
