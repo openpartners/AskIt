@@ -605,3 +605,278 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 58ms (Views: 55.8ms | Allocations: 4106)
 
 
+Started GET "/?name=Andrey" for 127.0.0.1 at 2022-04-17 20:55:57 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"name"=>"Andrey"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 3725)
+Completed 200 OK in 34ms (Views: 33.3ms | Allocations: 4110)
+
+
+Started GET "/?name=" for 127.0.0.1 at 2022-04-17 20:56:04 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"name"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 3720)
+Completed 200 OK in 29ms (Views: 27.1ms | Allocations: 4105)
+
+
+Started GET "/?name" for 127.0.0.1 at 2022-04-17 20:56:10 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"name"=>nil}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 3720)
+Completed 200 OK in 37ms (Views: 35.5ms | Allocations: 4105)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-17 20:56:17 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 3720)
+Completed 200 OK in 32ms (Views: 31.1ms | Allocations: 4108)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-17 20:56:32 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 3733)
+Completed 200 OK in 38ms (Views: 36.8ms | Allocations: 4120)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-18 22:55:20 +0200
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.2ms | Allocations: 5707)
+Completed 200 OK in 204ms (Views: 161.9ms | ActiveRecord: 0.0ms | Allocations: 8196)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 22:55:30 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 4867)
+Completed 200 OK in 58ms (Views: 32.1ms | ActiveRecord: 1.6ms | Allocations: 9108)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 22:58:52 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 153.4ms | Allocations: 7188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 197.4ms | Allocations: 10971)
+Completed 200 OK in 208ms (Views: 202.5ms | ActiveRecord: 0.0ms | Allocations: 12063)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:01:44 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 45.2ms | Allocations: 5504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 9289)
+Completed 200 OK in 89ms (Views: 86.6ms | Allocations: 10392)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:06:50 +0200
+Processing by QuestionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 5971)
+Completed 200 OK in 41ms (Views: 26.2ms | ActiveRecord: 0.6ms | Allocations: 9486)
+
+
+Started POST "/questions/new" for 127.0.0.1 at 2022-04-18 23:07:18 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/questions/new"):
+  
+Started POST "/questions/new" for 127.0.0.1 at 2022-04-18 23:08:01 +0200
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/questions/new"):
+  
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:08:55 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 46.6ms | Allocations: 4073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.8ms | Allocations: 9415)
+Completed 200 OK in 150ms (Views: 124.3ms | ActiveRecord: 1.0ms | Allocations: 15331)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-18 23:08:59 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 4779)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 1.6ms | Allocations: 5382)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:09:07 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2097)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 5666)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 6065)
+
+
+Started POST "/questions/new" for 127.0.0.1 at 2022-04-18 23:09:19 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/questions/new"):
+  
+Started POST "/questions/new" for 127.0.0.1 at 2022-04-18 23:19:49 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/questions/new"):
+  
+Started POST "/questions/new" for 127.0.0.1 at 2022-04-18 23:21:44 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/questions/new"):
+  
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:22:55 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 5666)
+Completed 200 OK in 64ms (Views: 63.1ms | Allocations: 6062)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-18 23:23:03 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/questions/index.html.erb:3
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 5776)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 2.2ms | Allocations: 6169)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-18 23:23:06 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 3785)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.0ms | Allocations: 4668)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-18 23:23:07 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 5066)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms | Allocations: 5457)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:23:16 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 5663)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 6052)
+
+
+Started GET "/questions/create" for 127.0.0.1 at 2022-04-18 23:23:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/questions/create"):
+  
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:23:31 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2091)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5658)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 6046)
+
+
+Started POST "/questions/new" for 127.0.0.1 at 2022-04-18 23:23:38 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/questions/new"):
+  
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:27:39 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 5665)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 6055)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:49:48 +0200
+Processing by QuestionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 4404)
+Completed 200 OK in 54ms (Views: 34.0ms | ActiveRecord: 0.4ms | Allocations: 7943)
+
+
+Started POST "/questions" for 127.0.0.1 at 2022-04-18 23:50:01 +0200
+Processing by QuestionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"title"=>"test 1", "body"=>"body test 1"}, "commit"=>"Submit question!"}
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 505)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-18 23:50:28 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 4262)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 4650)
+
+
