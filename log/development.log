@@ -2278,3 +2278,125 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.4ms | Allocations: 12025)
 
 
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-21 00:05:15 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  [1m[36mQuestion Load (9.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 2.4ms | Allocations: 837)
+  Rendered questions/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 9048)
+Completed 200 OK in 130ms (Views: 90.2ms | ActiveRecord: 11.7ms | Allocations: 11946)
+
+
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-21 00:08:25 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 8.5ms | Allocations: 1324)
+  Rendered questions/edit.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1635)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 1700)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.4ms | Allocations: 3296)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @question do |f| %>
+<div class="mb-3 row">
+    <%= f.label :title, class: 'col-sm-2 col-form-label' %>
+    <div class="col-sm-10">
+        <%= f.text_field :title, required: true, minlength: 2, placeholder: "Title", class: 'form-control'%>
+    </div>
+</div>
+<div class="mb-3 row">
+    <%= f.label :body, class: 'col-sm-2 col-form-label' %>
+    <div class="col-sm-10">
+        <%= f.text_area :body, required: true, minlength: 2, class: 'form-control'% %>
+    </div>
+</div>
+<%= f.submit "Submit question!", class: 'btn btn-primary' %>
+<% end %>
+):
+1:    <%= form_with model: @question do |f| %>
+2:    <div class="mb-3 row">
+3:        <%= f.label :title, class: 'col-sm-2 col-form-label' %>
+4:        <div class="col-sm-10">
+5:            <%= f.text_field :title, required: true, minlength: 2, placeholder: "Title", class: 'form-control'%>
+6:        </div>
+7:    </div>
+8:    <div class="mb-3 row">
+9:        <%= f.label :body, class: 'col-sm-2 col-form-label' %>
+10:        <div class="col-sm-10">
+11:            <%= f.text_area :body, required: true, minlength: 2, class: 'form-control'% %>
+12:        </div>
+13:    </div>
+14:    <%= f.submit "Submit question!", class: 'btn btn-primary' %>
+15:    <% end %>
+  
+app/views/questions/_form.html.erb:11: syntax error, unexpected ')'
+app/views/questions/_form.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:11: syntax error, unexpected ')'
+app/views/questions/_form.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:11: syntax error, unexpected ')'
+app/views/questions/_form.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:11: syntax error, unexpected ')'
+app/views/questions/_form.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:11: syntax error, unexpected ')'
+app/views/questions/_form.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:11: syntax error, unexpected ')'
+app/views/questions/_form.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/questions/_form.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/questions/edit.html.erb:4
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-21 00:09:06 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 4.2ms | Allocations: 861)
+  Rendered questions/edit.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 9079)
+Completed 200 OK in 78ms (Views: 68.2ms | ActiveRecord: 0.5ms | Allocations: 10702)
+
+
+Started PATCH "/questions/3" for 127.0.0.1 at 2022-04-21 00:09:13 +0200
+Processing by QuestionsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"title"=>"test 2", "body"=>"body test 222"}, "commit"=>"Submit question!", "id"=>"3"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:17:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/questions_controller.rb:18:in `update'
+  [1m[36mQuestion Update (0.5ms)[0m  [1m[33mUPDATE "questions" SET "body" = ?, "updated_at" = ? WHERE "questions"."id" = ?[0m  [["body", "body test 222"], ["updated_at", "2022-04-20 22:09:13.592430"], ["id", 3]]
+  ↳ app/controllers/questions_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/questions_controller.rb:18:in `update'
+Redirected to http://127.0.0.1:3000/questions
+Completed 302 Found in 32ms (ActiveRecord: 11.0ms | Allocations: 2941)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-21 00:09:13 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 8964)
+Completed 200 OK in 59ms (Views: 53.8ms | ActiveRecord: 0.2ms | Allocations: 9477)
+
+
