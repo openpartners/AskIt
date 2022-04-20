@@ -1715,3 +1715,566 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.3ms | Allocations: 6181)
 
 
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:12:20 +0200
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 45.0ms | Allocations: 4301)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/openpartners/Projekty/RoR/Ilya B./kurs/AskIt/AskIt/public/packs
+[Webpacker] Hash: fc768157e0b4a26e5521
+Version: webpack 4.46.0
+Time: 5201ms
+Built at: 04/20/2022 11:12:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6b7fb41cf0d21795902c.js    125 KiB  application  [emitted] [immutable]  application
+js/application-6b7fb41cf0d21795902c.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-6b7fb41cf0d21795902c.js js/application-6b7fb41cf0d21795902c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 213 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 33868.3ms | Allocations: 107766)
+Completed 200 OK in 33985ms (Views: 33898.4ms | ActiveRecord: 1.1ms | Allocations: 110749)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:13:32 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.7ms | Allocations: 8606)
+Completed 200 OK in 154ms (Views: 152.5ms | ActiveRecord: 0.3ms | Allocations: 8998)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:13:38 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 7786)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 8673)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:21:54 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 4618)
+Completed 500 Internal Server Error in 70ms (Allocations: 5693)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AskIt</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <nav class=d-flex flex-wrap align-item-center justify-content-center justify-content-lg-start>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><%= link_to 'Home', root_path, class 'nav-link px-2 text-white'%></li>
+            <li><%= link_to 'Questions', questions_path, class 'nav-link px-2 text-white' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mt-3">
+      <%= yield %>
+    </main>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <meta charset="utf-8">
+5:        <title>AskIt</title>
+6:        <meta name="viewport" content="width=device-width,initial-scale=1">
+7:        <%= csrf_meta_tags %>
+8:        <%= csp_meta_tag %>
+9:    
+10:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+11:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+12:      </head>
+13:    
+14:      <body>
+15:        <header class="p-3 bg-dark text-white">
+16:          <div class="container">
+17:            <nav class=d-flex flex-wrap align-item-center justify-content-center justify-content-lg-start>
+18:              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+19:                <li><%= link_to 'Home', root_path, class 'nav-link px-2 text-white'%></li>
+20:                <li><%= link_to 'Questions', questions_path, class 'nav-link px-2 text-white' %></li>
+21:              </ul>
+22:            </nav>
+23:          </div>
+24:        </header>
+25:    
+26:        <main class="container mt-3">
+27:          <%= yield %>
+28:        </main>
+29:      </body>
+30:    </html>
+  
+app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:33: syntax error, unexpected `end', expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:22:44 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 8201)
+Completed 200 OK in 98ms (Views: 94.3ms | Allocations: 9399)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:22:48 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 7722)
+Completed 200 OK in 49ms (Views: 48.1ms | Allocations: 8113)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:22:49 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/questions/index.html.erb:3
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 2567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 10345)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 2.4ms | Allocations: 11250)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:22:50 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 8385)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms | Allocations: 8778)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:22:51 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 9287)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.3ms | Allocations: 9684)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-20 23:22:58 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (2.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 7770)
+Completed 200 OK in 138ms (Views: 70.5ms | ActiveRecord: 2.3ms | Allocations: 12507)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:23:00 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 8258)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms | Allocations: 8668)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:23:01 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 9271)
+Completed 200 OK in 88ms (Views: 87.2ms | ActiveRecord: 0.3ms | Allocations: 9663)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-20 23:23:34 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.7ms | Allocations: 8395)
+Completed 200 OK in 169ms (Views: 167.8ms | ActiveRecord: 0.0ms | Allocations: 8786)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:45:20 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 2074)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 101.3ms | Allocations: 9990)
+Completed 200 OK in 125ms (Views: 118.4ms | ActiveRecord: 2.3ms | Allocations: 11655)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:46:43 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 9172)
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 0.2ms | Allocations: 10268)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:48:24 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 9175)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.2ms | Allocations: 10271)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:48:49 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 9163)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.2ms | Allocations: 10253)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-20 23:49:04 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 203.4ms | Allocations: 6566)
+  Rendered questions/new.html.erb within layouts/application (Duration: 216.1ms | Allocations: 6866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 283.3ms | Allocations: 14454)
+Completed 200 OK in 296ms (Views: 285.1ms | ActiveRecord: 0.0ms | Allocations: 14981)
+
+
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-20 23:49:09 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 1.7ms | Allocations: 642)
+  Rendered questions/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 9170)
+Completed 200 OK in 59ms (Views: 52.7ms | ActiveRecord: 0.4ms | Allocations: 10231)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:50:44 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 9166)
+Completed 200 OK in 78ms (Views: 72.9ms | ActiveRecord: 0.3ms | Allocations: 10261)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:51:29 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 9166)
+Completed 200 OK in 57ms (Views: 51.8ms | ActiveRecord: 0.3ms | Allocations: 10262)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:52:03 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 9176)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 0.3ms | Allocations: 10266)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-20 23:53:11 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (2.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 8500)
+Completed 200 OK in 110ms (Views: 98.5ms | ActiveRecord: 2.1ms | Allocations: 9545)
+
+
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-20 23:53:14 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 4.7ms | Allocations: 814)
+  Rendered questions/edit.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 9457)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.2ms | Allocations: 10500)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-20 23:57:00 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 8754)
+Completed 200 OK in 91ms (Views: 71.3ms | ActiveRecord: 0.2ms | Allocations: 10381)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-20 23:58:06 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 8205)
+Completed 200 OK in 73ms (Views: 63.2ms | ActiveRecord: 0.4ms | Allocations: 9827)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-20 23:58:09 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 7814)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.2ms | Allocations: 8733)
+
+
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-20 23:58:11 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:13:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 4.7ms | Allocations: 814)
+  Rendered questions/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 9446)
+Completed 200 OK in 77ms (Views: 64.9ms | ActiveRecord: 0.2ms | Allocations: 10490)
+
+
+Started PATCH "/questions/3" for 127.0.0.1 at 2022-04-20 23:58:16 +0200
+Processing by QuestionsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"title"=>"test 2", "body"=>"body test 22"}, "commit"=>"Submit question!", "id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:17:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/questions_controller.rb:18:in `update'
+  [1m[36mQuestion Update (12.0ms)[0m  [1m[33mUPDATE "questions" SET "body" = ?, "updated_at" = ? WHERE "questions"."id" = ?[0m  [["body", "body test 22"], ["updated_at", "2022-04-20 21:58:16.466981"], ["id", 3]]
+  ↳ app/controllers/questions_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/questions_controller.rb:18:in `update'
+Redirected to http://127.0.0.1:3000/questions
+Completed 302 Found in 37ms (ActiveRecord: 15.8ms | Allocations: 3198)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:58:16 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 8946)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.2ms | Allocations: 9459)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-20 23:58:19 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 8489)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.1ms | Allocations: 9408)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:58:28 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.1ms | Allocations: 9336)
+Completed 200 OK in 111ms (Views: 107.5ms | ActiveRecord: 1.9ms | Allocations: 9727)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-20 23:58:29 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/_form.html.erb (Duration: 2.2ms | Allocations: 608)
+  Rendered questions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 9114)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.0ms | Allocations: 9630)
+
+
+Started POST "/questions" for 127.0.0.1 at 2022-04-20 23:58:43 +0200
+Processing by QuestionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"title"=>"test 3", "body"=>"body test 33333 "}, "commit"=>"Submit question!"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/questions_controller.rb:35:in `create'
+  [1m[36mQuestion Create (1.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test 3"], ["body", "body test 33333 "], ["created_at", "2022-04-20 21:58:43.810205"], ["updated_at", "2022-04-20 21:58:43.810205"]]
+  ↳ app/controllers/questions_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/questions_controller.rb:35:in `create'
+Redirected to http://127.0.0.1:3000/questions
+Completed 302 Found in 28ms (ActiveRecord: 10.6ms | Allocations: 2385)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:58:43 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 8795)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.8ms | Allocations: 9183)
+
+
+Started GET "/questions/5" for 127.0.0.1 at 2022-04-20 23:58:48 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 8485)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.6ms | Allocations: 9403)
+
+
+Started DELETE "/questions/5" for 127.0.0.1 at 2022-04-20 23:58:51 +0200
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:7:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/questions_controller.rb:8:in `destroy'
+  [1m[36mQuestion Destroy (1.4ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/questions_controller.rb:8:in `destroy'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/questions_controller.rb:8:in `destroy'
+Redirected to http://127.0.0.1:3000/questions
+Completed 302 Found in 27ms (ActiveRecord: 8.8ms | Allocations: 2538)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-20 23:58:51 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  Rendered questions/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 11637)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.4ms | Allocations: 12025)
+
+
