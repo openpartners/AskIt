@@ -3110,3 +3110,406 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.3ms | Allocations: 9380)
 
 
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:18:02 +0200
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 47.1ms | Allocations: 4641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 712.4ms | Allocations: 26669)
+Completed 200 OK in 834ms (Views: 740.7ms | ActiveRecord: 1.7ms | Allocations: 29612)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-28 00:18:18 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (2.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 8662)
+Completed 200 OK in 84ms (Views: 54.9ms | ActiveRecord: 2.9ms | Allocations: 10145)
+
+
+Started GET "/questions/323423" for 127.0.0.1 at 2022-04-28 00:18:25 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"323423"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 323423], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1751)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 1816)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 2731)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1 class="mb-4">
+    2:     <%= @question.title %>
+    3: </h1>
+    4: <p class="lead my-3">
+    5:     <%= @question.body %>
+  
+app/views/questions/show.html.erb:2
+Started GET "/questions/323423" for 127.0.0.1 at 2022-04-28 00:18:41 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"323423"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Completed 404 Not Found in 34ms (ActiveRecord: 2.8ms | Allocations: 3937)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'={:id=>"323423"}):
+  
+app/controllers/questions_controller.rb:50:in `set_question'
+Started GET "/questions/323423" for 127.0.0.1 at 2022-04-28 00:25:58 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"323423"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"323423"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 3.6ms | Allocations: 29)
+Completed 404 Not Found in 28ms (Views: 15.5ms | ActiveRecord: 0.5ms | Allocations: 3656)
+
+
+Started GET "/questions/323423" for 127.0.0.1 at 2022-04-28 00:31:27 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"323423"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"323423"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 1.8ms | Allocations: 29)
+Completed 404 Not Found in 22ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 3484)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-28 00:31:33 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"3"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 0.3ms | Allocations: 29)
+Completed 404 Not Found in 8ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 2037)
+
+
+Started GET "/questions/" for 127.0.0.1 at 2022-04-28 00:31:38 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 3099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 10920)
+Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 1.7ms | Allocations: 11337)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-28 00:31:40 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"3"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 0.2ms | Allocations: 29)
+Completed 404 Not Found in 5ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 2042)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-28 00:32:10 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"3"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 2.1ms | Allocations: 29)
+Completed 404 Not Found in 31ms (Views: 3.8ms | ActiveRecord: 2.8ms | Allocations: 3859)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:32:25 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 3025)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 10714)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 1.4ms | Allocations: 11105)
+
+
+Started GET "/questions/3/edit" for 127.0.0.1 at 2022-04-28 00:32:28 +0200
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"3"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 0.2ms | Allocations: 29)
+Completed 404 Not Found in 5ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 2041)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:32:30 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (2.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 9607)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 2.7ms | Allocations: 9998)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:35:56 +0200
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 4641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 377.5ms | Allocations: 20739)
+Completed 200 OK in 447ms (Views: 404.1ms | ActiveRecord: 2.3ms | Allocations: 24082)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2022-04-28 00:36:01 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"4"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 0.9ms | Allocations: 45)
+Completed 404 Not Found in 51ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 3035)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:36:49 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 119.8ms | Allocations: 9054)
+Completed 200 OK in 135ms (Views: 121.0ms | ActiveRecord: 0.2ms | Allocations: 10009)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:36:53 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 8952)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.2ms | Allocations: 9354)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:36:55 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 8942)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.2ms | Allocations: 9337)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:36:56 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 8941)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.3ms | Allocations: 9335)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:36:56 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 8941)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.3ms | Allocations: 9335)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:36:56 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 8941)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.2ms | Allocations: 9335)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2022-04-28 00:36:59 +0200
+Processing by QuestionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 3.9ms | Allocations: 201)
+  Rendered questions/_form.html.erb (Duration: 116.9ms | Allocations: 6396)
+  Rendered questions/new.html.erb within layouts/application (Duration: 130.3ms | Allocations: 7272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.5ms | Allocations: 14856)
+Completed 200 OK in 197ms (Views: 190.4ms | ActiveRecord: 0.0ms | Allocations: 15385)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:37:04 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 8949)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.2ms | Allocations: 9347)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2022-04-28 00:37:07 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"4"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 3.3ms | Allocations: 30)
+Completed 404 Not Found in 11ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 2060)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:37:09 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 9608)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.3ms | Allocations: 9999)
+
+
+Started GET "/questions/6" for 127.0.0.1 at 2022-04-28 00:37:14 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'={:id=>"6"}
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 0.3ms | Allocations: 29)
+Completed 404 Not Found in 10ms (Views: 1.2ms | ActiveRecord: 1.2ms | Allocations: 2040)
+
+
+Started GET "/questions/6" for 127.0.0.1 at 2022-04-28 00:42:11 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Completed 404 Not Found in 23ms (ActiveRecord: 2.5ms | Allocations: 3692)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'={:id=>"6"}):
+  
+app/controllers/questions_controller.rb:50:in `set_question'
+Started GET "/questions/6" for 127.0.0.1 at 2022-04-28 00:44:00 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 8117)
+Completed 200 OK in 85ms (Views: 58.1ms | ActiveRecord: 3.0ms | Allocations: 13184)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-28 00:44:05 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:3
+  Rendered questions/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 9640)
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 0.4ms | Allocations: 10037)
+
+
+Started GET "/questions/3" for 127.0.0.1 at 2022-04-28 00:44:07 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 8486)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 0.2ms | Allocations: 9414)
+
+
+Started GET "/questions/3ewdwed" for 127.0.0.1 at 2022-04-28 00:44:10 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3ewdwed"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 7822)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.3ms | Allocations: 8747)
+
+
+Started GET "/questions/3323" for 127.0.0.1 at 2022-04-28 00:44:18 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3323"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3323], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:50:in `set_question'
+Couldn't find Question with 'id'=3323
+  Rendering public/404.html
+  Rendered public/404.html (Duration: 2.4ms | Allocations: 29)
+Completed 404 Not Found in 8ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1169)
+
+
