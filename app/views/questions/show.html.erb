@@ -32,11 +32,16 @@
 <% end %>
 
 <h2 class="mt-5">Answers</h2>
+
 <% @answers.each do |answer| %>
-  <time datetime="<%= answer.formatted_created_at %>">
-    <%= answer.formatted_created_at %>
-  </time>
-  <p>
-    <%= answer.body %>
-  </p>
+  <article class="mb-3">
+    <time datetime="<%= answer.formatted_created_at %>">
+      <%= answer.formatted_created_at %>
+    </time>
+    <p>
+      <%= answer.body %>
+    </p>
+
+    <%= link_to 'Destroy', question_answer_path(@question, answer), class: 'btn btn-danger btn-sm', data: {method: :delete, confirm: "Are you sure?"} %>
+  </article>
 <% end %>

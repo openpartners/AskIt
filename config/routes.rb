@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   resources :questions do 
-    resources :answers, only: %i[create]    
-    # question_answers_path POST  /questions/:question_id/answers(.:format) 
-
+    resources :answers, only: %i[create destroy]    
   end
 
 
