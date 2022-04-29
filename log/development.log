@@ -3818,3 +3818,111 @@ Processing by QuestionsController#show as HTML
 Completed 200 OK in 67ms (Views: 59.0ms | ActiveRecord: 0.5ms | Allocations: 11899)
 
 
+Started GET "/questions/4" for 127.0.0.1 at 2022-04-30 00:13:38 +0200
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 4.4ms | Allocations: 303)
+  Rendered shared/_errors.html.erb (Duration: 2.1ms | Allocations: 200)
+  Rendered answers/_form.html.erb (Duration: 78.5ms | Allocations: 2791)
+  [1m[36mAnswer Load (1.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  ↳ app/views/questions/show.html.erb:21
+  Rendered questions/show.html.erb within layouts/application (Duration: 101.4ms | Allocations: 5096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 724.5ms | Allocations: 21097)
+Completed 200 OK in 998ms (Views: 748.2ms | ActiveRecord: 4.4ms | Allocations: 34379)
+
+
+Started POST "/questions/4/answers" for 127.0.0.1 at 2022-04-30 00:13:47 +0200
+Processing by AnswersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "answer"=>{"body"=>"lallala 3"}, "commit"=>"Submit answer!", "question_id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mAnswer Create (6.2ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "lallala 3"], ["question_id", 4], ["created_at", "2022-04-29 22:13:47.604321"], ["updated_at", "2022-04-29 22:13:47.604321"]]
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/questions/4
+Completed 302 Found in 69ms (ActiveRecord: 10.2ms | Allocations: 3368)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2022-04-30 00:13:47 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 117)
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered answers/_form.html.erb (Duration: 2.5ms | Allocations: 816)
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  ↳ app/views/questions/show.html.erb:21
+  Rendered questions/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 11855)
+Completed 200 OK in 86ms (Views: 69.9ms | ActiveRecord: 0.6ms | Allocations: 14123)
+
+
+Started GET "/questions/4/answers/12/edit" for 127.0.0.1 at 2022-04-30 00:16:36 +0200
+Processing by AnswersController#edit as HTML
+  Parameters: {"question_id"=>"4", "id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."id" = ? LIMIT ?[0m  [["question_id", 4], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:47:in `set_answer!'
+  Rendering layout layouts/application.html.erb
+  Rendering answers/edit.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 118)
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered answers/_form.html.erb (Duration: 6.1ms | Allocations: 632)
+  Rendered answers/edit.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 266.3ms | Allocations: 8597)
+Completed 200 OK in 694ms (Views: 345.6ms | ActiveRecord: 5.2ms | Allocations: 18297)
+
+
+Started PATCH "/questions/4/answers/12" for 127.0.0.1 at 2022-04-30 00:16:44 +0200
+Processing by AnswersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "answer"=>{"body"=>"odpowiedżź 1234"}, "commit"=>"Submit answer!", "question_id"=>"4", "id"=>"12"}
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mAnswer Load (1.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."id" = ? LIMIT ?[0m  [["question_id", 4], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:47:in `set_answer!'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/answers_controller.rb:6:in `update'
+  [1m[36mAnswer Update (3.1ms)[0m  [1m[33mUPDATE "answers" SET "body" = ?, "updated_at" = ? WHERE "answers"."id" = ?[0m  [["body", "odpowiedżź 1234"], ["updated_at", "2022-04-29 22:16:44.495158"], ["id", 12]]
+  ↳ app/controllers/answers_controller.rb:6:in `update'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/answers_controller.rb:6:in `update'
+Redirected to http://127.0.0.1:3000/questions/4#answer-12
+Completed 302 Found in 105ms (ActiveRecord: 11.8ms | Allocations: 3946)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2022-04-30 00:16:44 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.3ms | Allocations: 117)
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered answers/_form.html.erb (Duration: 59.4ms | Allocations: 3830)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  ↳ app/views/questions/show.html.erb:21
+  Rendered questions/show.html.erb within layouts/application (Duration: 106.8ms | Allocations: 5276)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 247.6ms | Allocations: 13112)
+Completed 200 OK in 271ms (Views: 267.1ms | ActiveRecord: 0.7ms | Allocations: 14477)
+
+
