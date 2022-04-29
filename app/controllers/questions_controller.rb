@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
 		@answer = @question.answers.build
 		@answers = @question.answers.order created_at: :desc
 		# @answers = Answer.where(question: @question).order created_at: :desc
-		# @answers = Answer.where(question: @question).limit(2).order created_at: :desc
+		# @answers = Answer.where(question: @question).limit(2).order(created_at: :desc)
 	end
 
 	def destroy
