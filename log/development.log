@@ -4388,3 +4388,369 @@ Processing by QuestionsController#show as HTML
 Completed 200 OK in 1429ms (Views: 1028.8ms | ActiveRecord: 10.7ms | Allocations: 35717)
 
 
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (4.1ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Deep v you probably haven't heard of them wolf humblebrag diy."], ["body", "Annus thorax pectus. Spiculum subito solio. Cras contabesco artificiose. Deficio tepesco tutis. Cinis canis tibi. Consequatur advoco copiose."], ["created_at", "2022-04-30 13:43:45.656120"], ["updated_at", "2022-04-30 13:43:45.656120"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Kogi vinegar park."], ["body", "Abduco cupiditate accipio. Degusto bardus ara. Stultus textor ait. Beneficium usus distinctio. Averto audio tricesimus. Teneo temptatio maiores. Ea trans uter. Studio consectetur quos."], ["created_at", "2022-04-30 13:43:45.674064"], ["updated_at", "2022-04-30 13:43:45.674064"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pinterest green juice stumptown."], ["body", "Caput undique valens. Repudiandae corporis arbitro. Adnuo crustulum cibus. Appello quasi repudiandae. Error crapula convoco. Aliquam torqueo succedo. Confugo cariosus abscido."], ["created_at", "2022-04-30 13:43:45.686840"], ["updated_at", "2022-04-30 13:43:45.686840"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Kombucha schlitz stumptown before they sold out letterpress twee ramps."], ["body", "Degusto accommodo deficio. Agnitio alo amicitia. Temptatio cupiditas aeger. Suus sophismata inflammatio. Umbra sit conforto. Et curvus aliqua. Tollo territo omnis."], ["created_at", "2022-04-30 13:43:45.699648"], ["updated_at", "2022-04-30 13:43:45.699648"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tote bag heirloom neutra."], ["body", "Stabilis atrox attero. Utique accusantium delinquo. Audax vilis audentia. Cohors in blanditiis. Triginta taceo admiratio. Certe vestrum decimus. Viduata explicabo pecus. Spiritus pecto animadverto."], ["created_at", "2022-04-30 13:43:45.712898"], ["updated_at", "2022-04-30 13:43:45.712898"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (5.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hella 90's try-hard tacos organic fixie goth chicharrones."], ["body", "Et voco collum. Quam timidus compono. Aliquid decerno curo. Bellicus amplexus tenetur. Adulescens turpis verumtamen. Vitiosus dapifer aut. Enim territo defungo. Provident colo attonbitus."], ["created_at", "2022-04-30 13:43:45.728353"], ["updated_at", "2022-04-30 13:43:45.728353"]]
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "+1 aesthetic banjo blue bottle carry mlkshk crucifix."], ["body", "Sperno tergeo vespillo. Aspicio advoco baiulus. Asperiores communis cultura. Canonicus sunt aestas. Voluptatem alter defluo."], ["created_at", "2022-04-30 13:43:45.765073"], ["updated_at", "2022-04-30 13:43:45.765073"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Distillery green juice chartreuse locavore yolo shoreditch pork belly."], ["body", "Totidem ante velum. Admitto colloco speciosus. Dignissimos allatus defaeco. Repudiandae adamo decumbo. Esse dolorem assentator."], ["created_at", "2022-04-30 13:43:45.823062"], ["updated_at", "2022-04-30 13:43:45.823062"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hoodie celiac gluten-free ethical brunch franzen."], ["body", "Aggredior aut assentator. Inflammatio acceptus decipio. Voluptatem argentum aegrus. Carmen temeritas subvenio. Officia creo sub. Depopulo utrum thermae. Coma despecto consequatur. Aestivus conscendo animi."], ["created_at", "2022-04-30 13:43:45.853341"], ["updated_at", "2022-04-30 13:43:45.853341"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Kale chips cardigan cold-pressed cleanse gluten-free +1 kogi jean shorts."], ["body", "Rerum surculus inventore. Teneo strenuus utilis. Est statim alo. Velit voveo voluntarius. Volup statim tum. Theologus quasi adipisci."], ["created_at", "2022-04-30 13:43:45.874729"], ["updated_at", "2022-04-30 13:43:45.874729"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tumblr franzen tofu irony viral keffiyeh."], ["body", "Quia surgo demum. Confugo tendo summopere. Cavus cariosus sollicito. Velit clibanus adduco. Voluptas suasoria nam."], ["created_at", "2022-04-30 13:43:45.888863"], ["updated_at", "2022-04-30 13:43:45.888863"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Squid iphone raw denim authentic."], ["body", "Crudelis coaegresco officiis. Appello claustrum turba. Quasi callide decipio. Aetas compello despecto. Amita voluptate atavus. Ubi alius taedium."], ["created_at", "2022-04-30 13:43:45.906354"], ["updated_at", "2022-04-30 13:43:45.906354"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Semiotics tacos lomo direct trade fashion axe godard chicharrones franzen."], ["body", "Thymum ipsa quis. Verumtamen validus vilicus. Natus apto tollo. Agnosco aspernatur et. Termes nemo pel. Currus acerbitas paens. Cum comes debilito."], ["created_at", "2022-04-30 13:43:45.919162"], ["updated_at", "2022-04-30 13:43:45.919162"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Swag fingerstache park next level pop-up vice."], ["body", "Super utpote venustas. Curto communis cauda. Odit alo aureus. Aqua defigo attollo. Qui ciminatio tergiversatio. Audax thorax tero. Cras absens corrumpo. Fuga atavus cribro."], ["created_at", "2022-04-30 13:43:45.940200"], ["updated_at", "2022-04-30 13:43:45.940200"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Goth skateboard swag deep v bitters."], ["body", "Spes decumbo summisse. Tepidus vito comes. Tamen carus voco. Cunabula amor vereor. Uterque considero atrox. Amplexus peior debeo. Cunctatio quia adhuc. Incidunt aut creta."], ["created_at", "2022-04-30 13:43:45.964182"], ["updated_at", "2022-04-30 13:43:45.964182"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Before they sold out slow-carb dreamcatcher viral retro small batch bushwick messenger bag."], ["body", "Ullam supellex abscido. Assumenda altus strenuus. Accedo crapula tandem. Tamisium vitium dolorum. Ut triginta catena. Temporibus cornu attollo."], ["created_at", "2022-04-30 13:43:45.984474"], ["updated_at", "2022-04-30 13:43:45.984474"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mlkshk cronut diy squid tofu direct trade green juice echo."], ["body", "Turbo varietas aut. Bellum tollo adstringo. Vulgivagus volubilis vulariter. Tamdiu averto omnis. Terebro aeger derelinquo. Tremo conforto ulciscor. Spes antiquus communis."], ["created_at", "2022-04-30 13:43:46.008814"], ["updated_at", "2022-04-30 13:43:46.008814"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Slow-carb gluten-free yolo cliche kombucha."], ["body", "Victus mollitia cedo. Cetera verbera atrocitas. Adipiscor peior thalassinus. Ciminatio vereor amitto. Triduana brevis terga."], ["created_at", "2022-04-30 13:43:46.022265"], ["updated_at", "2022-04-30 13:43:46.022265"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Single-origin coffee letterpress biodiesel yuccie paleo literally tumblr."], ["body", "Voluptas omnis peior. Temperantia beatae qui. Confido armarium sophismata. Curriculum subseco compono. Voluptatem abundans alii. Canto confugo decimus."], ["created_at", "2022-04-30 13:43:46.050148"], ["updated_at", "2022-04-30 13:43:46.050148"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Helvetica skateboard vegan ugh cred."], ["body", "Ancilla magnam absque. Traho via sunt. Traho dolor usque. Aut tamisium dolores. Aiunt depraedor alioqui. Aequitas creta ipsa. Ventosus allatus natus. Cura amaritudo id."], ["created_at", "2022-04-30 13:43:46.073329"], ["updated_at", "2022-04-30 13:43:46.073329"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Godard distillery pork belly typewriter vhs."], ["body", "Vestigium infit torrens. Vesco copia aptus. Defluo cupressus cupiditas. Pecto velit desolo. Callide quae amiculum."], ["created_at", "2022-04-30 13:43:46.094445"], ["updated_at", "2022-04-30 13:43:46.094445"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Flexitarian drinking loko hashtag tofu."], ["body", "Confido delectatio cernuus. Omnis vilis ciminatio. Cilicium civis beatus. Sit tribuo celebrer. Provident voluptatem corporis. Aeger suffragium adeo. Solium absens campana."], ["created_at", "2022-04-30 13:43:46.112102"], ["updated_at", "2022-04-30 13:43:46.112102"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mustache freegan jean shorts cleanse."], ["body", "Viriliter ulciscor velut. Deprimo suffoco depulso. Approbo corpus qui. Civitas aequus dedecor. Alii canis caveo. Universe paulatim vulariter."], ["created_at", "2022-04-30 13:43:46.123295"], ["updated_at", "2022-04-30 13:43:46.123295"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fashion axe pinterest offal health stumptown."], ["body", "Vinum debeo armarium. Exercitationem baiulus cunctatio. Turba cito somniculosus. Soleo angelus tamen. Similique dolores avoco. Tricesimus at tego."], ["created_at", "2022-04-30 13:43:46.145386"], ["updated_at", "2022-04-30 13:43:46.145386"]]
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Migas you probably haven't heard of them cronut readymade knausgaard literally."], ["body", "Coepi quam cerno. Omnis sed patria. Acidus adulatio ut. Repellendus aqua circumvenio. Quia debitis patria. Cras subnecto calcar. Tremo id animi. Basium ustilo adstringo."], ["created_at", "2022-04-30 13:43:46.186053"], ["updated_at", "2022-04-30 13:43:46.186053"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Goth banjo disrupt blue bottle next level."], ["body", "Subiungo ascit temporibus. Debilito coma pecunia. Substantia agnosco suggero. Tristis vicissitudo curriculum. Vado deludo avoco. Pauci casso convoco. Clam possimus voco. Tandem voluptatem sustineo."], ["created_at", "2022-04-30 13:43:46.205878"], ["updated_at", "2022-04-30 13:43:46.205878"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Squid flannel flexitarian migas single-origin coffee."], ["body", "Termes pax vulgaris. Testimonium umquam stella. Voveo caste degenero. Crebro adfero animi. Amitto deleo ipsum. Adhaero est sollicito."], ["created_at", "2022-04-30 13:43:46.224021"], ["updated_at", "2022-04-30 13:43:46.224021"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Migas tattooed aesthetic pickled polaroid normcore."], ["body", "Aestivus cultura peior. Autem vox truculenter. Vilis capillus arbustum. Cogito amplus aqua. Tero velut dolore. Quos et vitium. Demo suppellex volaticus."], ["created_at", "2022-04-30 13:43:46.248128"], ["updated_at", "2022-04-30 13:43:46.248128"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cornhole flannel post-ironic pickled sustainable."], ["body", "Comptus tenax celer. Curso sublime una. Dolor amor pecto. Custodia spero carcer. Perferendis tredecim adstringo. Dolores sol sursum."], ["created_at", "2022-04-30 13:43:46.273551"], ["updated_at", "2022-04-30 13:43:46.273551"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Park hoodie umami."], ["body", "Infit id balbus. Eum illum vobis. Advoco tot ventosus. Voro creo certo. Aequus suffoco constans. Cruciamentum quisquam vitiosus. Crapula usque tibi."], ["created_at", "2022-04-30 13:43:46.289264"], ["updated_at", "2022-04-30 13:43:46.289264"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:44:08 +0200
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.7ms | Allocations: 304)
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 152.3ms | Allocations: 12638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 664.9ms | Allocations: 28670)
+Completed 200 OK in 760ms (Views: 687.1ms | ActiveRecord: 2.4ms | Allocations: 32794)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:46:45 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.6ms | Allocations: 268)
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 75.3ms | Allocations: 9876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 118.0ms | Allocations: 17856)
+Completed 200 OK in 132ms (Views: 125.8ms | ActiveRecord: 0.7ms | Allocations: 18951)
+
+
+Started DELETE "/questions/4" for 127.0.0.1 at 2022-04-30 15:47:00 +0200
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mAnswer Load (4.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mAnswer Destroy (4.5ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mAnswer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mAnswer Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+Redirected to http://127.0.0.1:3000/questions
+Completed 302 Found in 441ms (ActiveRecord: 37.7ms | Allocations: 15809)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:47:00 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 117)
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 139.2ms | Allocations: 9155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 249.0ms | Allocations: 16938)
+Completed 200 OK in 253ms (Views: 251.1ms | ActiveRecord: 0.5ms | Allocations: 17339)
+
+
+Started DELETE "/questions/11" for 127.0.0.1 at 2022-04-30 15:47:04 +0200
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"11"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mQuestion Destroy (2.0ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/questions_controller.rb:12:in `destroy'
+Redirected to http://127.0.0.1:3000/questions
+Completed 302 Found in 29ms (ActiveRecord: 5.5ms | Allocations: 3475)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:47:04 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 1.0ms | Allocations: 110)
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 131.5ms | Allocations: 8801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 233.2ms | Allocations: 19794)
+Completed 200 OK in 237ms (Views: 234.0ms | ActiveRecord: 0.5ms | Allocations: 20194)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:48:15 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 4.1ms | Allocations: 268)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 86.5ms | Allocations: 9329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 146.4ms | Allocations: 17305)
+Completed 200 OK in 157ms (Views: 152.5ms | ActiveRecord: 0.3ms | Allocations: 18417)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:55:09 +0200
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms | Allocations: 6498)
+
+
+  
+NoMethodError (undefined method `call' for #<Class:0x00007fc1bc3f4370>
+Did you mean?  all):
+  
+app/controllers/questions_controller.rb:30:in `index'
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:57:05 +0200
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:30:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 5.8ms | Allocations: 299)
+  [1m[36mQuestion Load (4.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 89.5ms | Allocations: 10078)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 577.9ms | Allocations: 26113)
+Completed 200 OK in 606ms (Views: 580.0ms | ActiveRecord: 6.7ms | Allocations: 29793)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 15:57:20 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 117)
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:7
+  Rendered questions/index.html.erb within layouts/application (Duration: 119.6ms | Allocations: 7205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 196.1ms | Allocations: 14854)
+Completed 200 OK in 200ms (Views: 197.0ms | ActiveRecord: 0.9ms | Allocations: 15335)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:00:33 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.8ms | Allocations: 268)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 2865.1ms | Allocations: 361915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2939.2ms | Allocations: 369796)
+Completed 200 OK in 2952ms (Views: 2948.7ms | ActiveRecord: 0.7ms | Allocations: 371068)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2022-04-30 16:00:39 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 117)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 43.3ms | Allocations: 6424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.3ms | Allocations: 14749)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.6ms | Allocations: 15217)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:00:40 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 113)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (15.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 125.0ms | Allocations: 10327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 161.9ms | Allocations: 18631)
+Completed 200 OK in 164ms (Views: 147.4ms | ActiveRecord: 15.5ms | Allocations: 19100)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:05:11 +0200
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 4.4ms | Allocations: 304)
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 1225.6ms | Allocations: 360234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1652.9ms | Allocations: 376265)
+Completed 200 OK in 1741ms (Views: 1681.7ms | ActiveRecord: 3.7ms | Allocations: 382187)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:07:02 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.7ms | Allocations: 268)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 110.4ms | Allocations: 12070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 156.5ms | Allocations: 20031)
+Completed 200 OK in 175ms (Views: 164.8ms | ActiveRecord: 0.8ms | Allocations: 21309)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:08:21 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.3ms | Allocations: 268)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 116.9ms | Allocations: 12132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 146.1ms | Allocations: 20100)
+Completed 200 OK in 156ms (Views: 151.7ms | ActiveRecord: 0.8ms | Allocations: 21358)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:09:57 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 3.4ms | Allocations: 268)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 96.2ms | Allocations: 12261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 136.8ms | Allocations: 20223)
+Completed 200 OK in 149ms (Views: 143.3ms | ActiveRecord: 1.1ms | Allocations: 21500)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2022-04-30 16:11:08 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 117)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 90.1ms | Allocations: 6350)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 312.2ms | Allocations: 14687)
+Completed 200 OK in 317ms (Views: 314.8ms | ActiveRecord: 0.5ms | Allocations: 15165)
+
+
