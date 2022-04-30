@@ -4754,3 +4754,296 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 317ms (Views: 314.8ms | ActiveRecord: 0.5ms | Allocations: 15165)
 
 
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:14:15 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.9ms | Allocations: 113)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 181.2ms | Allocations: 10292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 394.2ms | Allocations: 18608)
+Completed 200 OK in 433ms (Views: 401.7ms | ActiveRecord: 0.7ms | Allocations: 19089)
+
+
+Started GET "/questions/42" for 127.0.0.1 at 2022-04-30 16:19:32 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 5.2ms | Allocations: 269)
+  Rendered shared/_errors.html.erb (Duration: 10.1ms | Allocations: 200)
+  Rendered answers/_form.html.erb (Duration: 152.5ms | Allocations: 1678)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 42]]
+  ↳ app/views/questions/show.html.erb:22
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC LIMIT ? OFFSET ?[0m  [["question_id", 42], ["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/questions/show.html.erb:23
+  Rendered collection of answers/_answer.html.erb [0 times] (Duration: 0.1ms | Allocations: 14)
+  Rendered questions/show.html.erb within layouts/application (Duration: 255.1ms | Allocations: 5250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 308.1ms | Allocations: 13156)
+Completed 200 OK in 600ms (Views: 329.3ms | ActiveRecord: 9.3ms | Allocations: 25055)
+
+
+Started POST "/questions/42/answers" for 127.0.0.1 at 2022-04-30 16:19:39 +0200
+Processing by AnswersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "answer"=>{"body"=>"jeden"}, "commit"=>"Submit answer!", "question_id"=>"42"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mAnswer Create (2.1ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jeden"], ["question_id", 42], ["created_at", "2022-04-30 14:19:39.203810"], ["updated_at", "2022-04-30 14:19:39.203810"]]
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (27.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/questions/42
+Completed 302 Found in 57ms (ActiveRecord: 30.4ms | Allocations: 3351)
+
+
+Started GET "/questions/42" for 127.0.0.1 at 2022-04-30 16:19:39 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 1.8ms | Allocations: 117)
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered answers/_form.html.erb (Duration: 4.2ms | Allocations: 505)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 42]]
+  ↳ app/views/questions/show.html.erb:22
+  [1m[36mAnswer Load (2.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC LIMIT ? OFFSET ?[0m  [["question_id", 42], ["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/questions/show.html.erb:23
+  Rendered collection of answers/_answer.html.erb [1 times] (Duration: 6.6ms | Allocations: 407)
+  Rendered questions/show.html.erb within layouts/application (Duration: 37.6ms | Allocations: 3181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 187.7ms | Allocations: 14219)
+Completed 200 OK in 205ms (Views: 186.6ms | ActiveRecord: 4.1ms | Allocations: 16076)
+
+
+Started POST "/questions/42/answers" for 127.0.0.1 at 2022-04-30 16:19:47 +0200
+Processing by AnswersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "answer"=>{"body"=>"dwaw dwa"}, "commit"=>"Submit answer!", "question_id"=>"42"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mAnswer Create (0.9ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "dwaw dwa"], ["question_id", 42], ["created_at", "2022-04-30 14:19:47.595056"], ["updated_at", "2022-04-30 14:19:47.595056"]]
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/questions/42
+Completed 302 Found in 37ms (ActiveRecord: 6.6ms | Allocations: 3033)
+
+
+Started GET "/questions/42" for 127.0.0.1 at 2022-04-30 16:19:47 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.8ms | Allocations: 113)
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered answers/_form.html.erb (Duration: 2.5ms | Allocations: 505)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 42]]
+  ↳ app/views/questions/show.html.erb:22
+  [1m[36mAnswer Load (3.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC LIMIT ? OFFSET ?[0m  [["question_id", 42], ["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/questions/show.html.erb:23
+  Rendered collection of answers/_answer.html.erb [2 times] (Duration: 6.1ms | Allocations: 396)
+  Rendered questions/show.html.erb within layouts/application (Duration: 49.7ms | Allocations: 6478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 221.6ms | Allocations: 14349)
+Completed 200 OK in 233ms (Views: 220.6ms | ActiveRecord: 4.4ms | Allocations: 15597)
+
+
+Started POST "/questions/42/answers" for 127.0.0.1 at 2022-04-30 16:19:57 +0200
+Processing by AnswersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "answer"=>{"body"=>"jakis trzeci"}, "commit"=>"Submit answer!", "question_id"=>"42"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:44:in `set_question!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mAnswer Create (1.0ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jakis trzeci"], ["question_id", 42], ["created_at", "2022-04-30 14:19:57.813686"], ["updated_at", "2022-04-30 14:19:57.813686"]]
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/answers_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/questions/42
+Completed 302 Found in 23ms (ActiveRecord: 6.8ms | Allocations: 3036)
+
+
+Started GET "/questions/42" for 127.0.0.1 at 2022-04-30 16:19:57 +0200
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:54:in `set_question!'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/show.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered answers/_form.html.erb (Duration: 3.9ms | Allocations: 502)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 42]]
+  ↳ app/views/questions/show.html.erb:22
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ? ORDER BY "answers"."created_at" DESC LIMIT ? OFFSET ?[0m  [["question_id", 42], ["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/questions/show.html.erb:23
+  Rendered collection of answers/_answer.html.erb [2 times] (Duration: 10.6ms | Allocations: 401)
+  Rendered questions/show.html.erb within layouts/application (Duration: 135.3ms | Allocations: 6905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 324.6ms | Allocations: 14578)
+Completed 200 OK in 341ms (Views: 329.7ms | ActiveRecord: 1.1ms | Allocations: 15824)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:22:45 +0200
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:31:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 118)
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 211.5ms | Allocations: 10243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 366.0ms | Allocations: 17861)
+Completed 200 OK in 399ms (Views: 363.7ms | ActiveRecord: 6.8ms | Allocations: 20710)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:23:26 +0200
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:31:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 118)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 58.7ms | Allocations: 9775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 103.7ms | Allocations: 17388)
+Completed 200 OK in 123ms (Views: 103.1ms | ActiveRecord: 4.5ms | Allocations: 20104)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2022-04-30 16:23:31 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 113)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 98.5ms | Allocations: 10215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.0ms | Allocations: 17867)
+Completed 200 OK in 158ms (Views: 155.8ms | ActiveRecord: 1.0ms | Allocations: 18354)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2022-04-30 16:23:33 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 113)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 77.4ms | Allocations: 9035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 140.4ms | Allocations: 17199)
+Completed 200 OK in 143ms (Views: 141.1ms | ActiveRecord: 0.7ms | Allocations: 17684)
+
+
+Started GET "/questions?page=4" for 127.0.0.1 at 2022-04-30 16:23:34 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 110)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 15]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 53.0ms | Allocations: 9412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.0ms | Allocations: 17200)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.8ms | Allocations: 17684)
+
+
+Started GET "/questions?page=5" for 127.0.0.1 at 2022-04-30 16:23:34 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 110)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 68.4ms | Allocations: 8920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 98.4ms | Allocations: 17215)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 0.6ms | Allocations: 17700)
+
+
+Started GET "/questions?page=6" for 127.0.0.1 at 2022-04-30 16:23:35 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"6"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 110)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 25]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 55.9ms | Allocations: 9430)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.3ms | Allocations: 17187)
+Completed 200 OK in 115ms (Views: 112.5ms | ActiveRecord: 0.5ms | Allocations: 17671)
+
+
+Started GET "/questions?page=7" for 127.0.0.1 at 2022-04-30 16:23:35 +0200
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"7"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.8ms | Allocations: 110)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 30]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 6243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 111.9ms | Allocations: 14536)
+Completed 200 OK in 119ms (Views: 113.2ms | ActiveRecord: 1.3ms | Allocations: 15020)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-04-30 16:23:38 +0200
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 110)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:7
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:8
+  Rendered questions/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 7123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.5ms | Allocations: 15445)
+Completed 200 OK in 113ms (Views: 111.0ms | ActiveRecord: 0.6ms | Allocations: 15931)
+
+

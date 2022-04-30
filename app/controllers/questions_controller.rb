@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
 
 	def show
 		@answer = @question.answers.build
-		@answers = @question.answers.order created_at: :desc
+		@answers = @question.answers.order(created_at: :desc).page(params[:page]).per(2)
 		# @answers = Answer.where(question: @question).order created_at: :desc
 		# @answers = Answer.where(question: @question).limit(2).order(created_at: :desc)
 	end
@@ -27,7 +27,8 @@ class QuestionsController < ApplicationController
 	end
 
 	def index
-		@questions = Question.order(created_at: :desc).page params[:page]
+		#@questions = Question.order(created_at: :desc).page params[:page] # default 25
+		@questions = Question.order(created_at: :desc).page(params[:page]).per(5)
 	end
 
 	def new
