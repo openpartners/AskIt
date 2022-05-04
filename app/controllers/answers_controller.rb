@@ -2,6 +2,10 @@ class AnswersController < ApplicationController
 	before_action :set_question!
 	before_action :set_answer!, except: :create
 
+	def index
+		
+	end
+
 	def update
 		if @answer.update answer_params
 			flash[:success] = "Answer updated!"
@@ -23,7 +27,7 @@ class AnswersController < ApplicationController
 				flash[:success] = "Answer created!"
 				redirect_to question_path(@question)
 			else
-				@answers = @question.answers.order created_at: :desc
+				@answers = @question.answers.order(created_at: :desc).page(params[:page]).per(5)
 				render 'questions/show'
 		end
 	end
