@@ -1,60 +1,61 @@
-class QuestionsController < ApplicationController
-	before_action :set_question!, only: %i[show destroy edit update]
+# frozen_string_literal: true
 
-	def show
+class QuestionsController < ApplicationController
+  before_action :set_question!, only: %i[show destroy edit update]
+
+  def show
     @question = @question.decorate
-		@answer = @question.answers.build
-		@pagy, @answers = pagy(@question.answers.order(created_at: :desc), items: 5)
+    @answer = @question.answers.build
+    @pagy, @answers = pagy(@question.answers.order(created_at: :desc), items: 5)
     @answers = @answers.decorate
     # @answers = @question.answers.order(created_at: :desc).page(params[:page]).per(5)
-		# @answers = Answer.where(question: @question).order created_at: :desc
-		# @answers = Answer.where(question: @question).limit(2).order(created_at: :desc)
-	end
+    # @answers = Answer.where(question: @question).order created_at: :desc
+    # @answers = Answer.where(question: @question).limit(2).order(created_at: :desc)
+  end
 
-	def destroy
-		@question.destroy
-		flash[:success] = "Question deleted!"
-		redirect_to questions_path
-	end
+  def destroy
+    @question.destroy
+    flash[:success] = 'Question deleted!'
+    redirect_to questions_path
+  end
 
-	def edit
-	end
+  def edit; end
 
-	def update
-		if @question.update question_params
-			flash[:success] = "Question updated!"
-			redirect_to questions_path
-		else
-			render :edit
-		end
-	end
+  def update
+    if @question.update question_params
+      flash[:success] = 'Question updated!'
+      redirect_to questions_path
+    else
+      render :edit
+    end
+  end
 
-	def index
-		@pagy, @questions = pagy(Question.order(created_at: :desc), items: 5)
+  def index
+    @pagy, @questions = pagy(Question.order(created_at: :desc), items: 5)
     @questions = @questions.decorate
-	end
+  end
 
-	def new
-		@question = Question.new
-	end
+  def new
+    @question = Question.new
+  end
 
-	def create
-		@question = Question.new question_params
-		if @question.save
-			flash[:success] = "Question created!"
-			redirect_to questions_path
-		else
-			render :new
-		end
-	end
+  def create
+    @question = Question.new question_params
+    if @question.save
+      flash[:success] = 'Question created!'
+      redirect_to questions_path
+    else
+      render :new
+    end
+  end
 
-	private
+  private
 
-	def question_params
-		params.require(:question).permit(:title, :body)
-	end
+  def question_params
+    params.require(:question).permit(:title, :body)
+  end
 
-	def set_question!
-		@question = Question.find params[:id]
-	end
+  def set_question!
+    @question = Question.find params[:id]
+  end
 end

@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
   def index
-    params[:name] ? @name = params[:name] : @name = "X-Men" 
+    @name = params[:name] || 'X-Men'
   end
-
 end

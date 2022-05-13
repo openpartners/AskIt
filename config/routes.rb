@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   resource :session, only: %i[new create destroy]
 
@@ -9,7 +11,6 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 end
-
 
 # resources :questions, only: %i[index new edit create update destroy show]
 # get '/questions', to: 'questions#index'

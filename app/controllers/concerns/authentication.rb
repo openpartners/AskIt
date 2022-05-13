@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module Authentication
   extend ActiveSupport::Concern
-
 
   included do
     private
@@ -67,5 +68,4 @@ module Authentication
 
     helper_method :current_user, :user_signed_in?
   end
-
 end
