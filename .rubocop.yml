@@ -11,3 +11,5 @@ Style/Documentation:
 
 Rails/FilePath:
   EnforcedStyle: arguments
+Rails/I18nLocaleTexts:
+  Enabled: false
