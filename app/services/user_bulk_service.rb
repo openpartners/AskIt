@@ -12,6 +12,8 @@ class UserBulkService < ApplicationService
   def call
     Zip::File.open(@archive) do |zip_file|
       zip_file.glob('*.xlsx').each do |entry|
+        # u = users_from(entry)
+        # binding.pry
         User.import users_from(entry), ignore: true
       end
     end
