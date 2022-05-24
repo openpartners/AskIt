@@ -11,27 +11,23 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 6.0.0-beta.7'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+# gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'draper', '~> 4.0'
-gem 'pagy', '~> 4.10'
-gem 'valid_email2', '~> 4.0'
-gem 'rubyzip', '~> 2'
+gem 'activerecord-import', '~> 1.2'
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
+gem 'draper', '~> 4.0'
+gem 'pagy', '~> 4.10'
 gem 'rubyXL', '~> 3.4'
-gem 'activerecord-import', '~> 1.2'
+gem 'rubyzip', '~> 2'
+gem 'valid_email2', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
